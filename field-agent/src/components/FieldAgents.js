@@ -3,9 +3,11 @@ import data from "../data";
 function FieldAgents() {
 
     return (
-        <div class="cards">
 
-        <div class="card">
+        <main>
+        <div className="cards">
+
+        <div className="card">
           <header>
           <h3>Hazel C. Sauven</h3>
           </header>
@@ -22,7 +24,7 @@ function FieldAgents() {
           </footer>
         </div>
 
-        <div class="card">
+        <div className="card">
           <header>
           <h3>Claudian C. O'Lynn</h3>
           </header>
@@ -39,7 +41,7 @@ function FieldAgents() {
           </footer>
         </div>
 
-        <div class="card">
+        <div className="card">
           <header>
           <h3>Winn V. Puckrin</h3>
           </header>
@@ -56,7 +58,7 @@ function FieldAgents() {
           </footer>
         </div>
 
-        <div class="card">
+        <div className="card">
           <header>
             <h3>Kiab U. Whitham</h3>
           </header>  
@@ -73,7 +75,7 @@ function FieldAgents() {
           </footer>
         </div>
 
-        <div class="card">
+        <div className="card">
           <header>
           <h3>Min E. Dearle</h3>
           </header>
@@ -90,7 +92,7 @@ function FieldAgents() {
           </footer>
         </div>
 
-        <div class="card">
+        <div className="card">
           <header>
           <h3>Urban H. Carwithen</h3>
           </header>
@@ -107,7 +109,7 @@ function FieldAgents() {
           </footer>
         </div>
 
-        <div class="card">
+        <div className="card">
           <header>
           <h3>Ulises B. Muhammad</h3>
           </header>
@@ -124,7 +126,7 @@ function FieldAgents() {
           </footer>
         </div>
 
-        <div class="card">
+        <div className="card">
           <header>
           <h3>Phylys Y. Howitt</h3>
           </header>
@@ -142,6 +144,7 @@ function FieldAgents() {
         </div>
 
       </div>
+      </main>
     );
 }
 
