@@ -8,6 +8,7 @@ function FieldAgents() {
     const [lastName, setLastName] = useState('');
     const [dob, setDob] = useState('');
     const [editAgentId, setEditAgentId] = useState(0);
+    const [deleteAgentId, setDeleteAgentId] = useState(0);
     const [heightInInches, setHeightInInches] = useState('');
     const [agents, setAgents] = useState(data);
 
@@ -106,10 +107,28 @@ function FieldAgents() {
         setCurrentView('Edit');
     }
 
+    const deleteAgentFormSubmitHandler = () => {
+        setAgents(agents.filter(agent => agent.agentId !== deleteAgentId));
+
+        setCurrentView('List');
+    }
+
     const agentDeleteClickHandler = (agentId) => {
 
-        setAgents(agents.filter(agent => agent.id !== agentId));
+        setDeleteAgentId(agentId);
 
+        const deleteAgent = agents.find(agent => agent.agentId === agentId);
+
+        setDeleteAgentId(deleteAgent.agentId)
+        setFirstName(deleteAgent.firstName);
+        setMiddleName(deleteAgent.middleName);
+        setLastName(deleteAgent.lastName);
+        setDob(deleteAgent.dob);
+        setHeightInInches(deleteAgent.heightInInches);
+
+        setCurrentView('Delete');
+
+    
     };
 
     const addAgentClickHandler = () => { setCurrentView('Add') }
@@ -245,6 +264,48 @@ function FieldAgents() {
                 </div>
             ) : null}
 
+            {currentView === 'Delete' ? (
+                <div class="container">
+                    <header>
+                        <h1>Field Agent</h1>
+                        <div>
+                            Welcome username! | <a href="#">Logout</a> | <a href="login.html">Login</a> | <a
+                                href="register.html">Register</a>
+                        </div>
+                    </header>
+                    <nav>
+                        <div>
+                            <button type="button" onClick={homeClickHandler} >Home</button> | <a href="#">Agencies</a> | <a href="#">Locations</a> |
+                            <button type="button" onClick={agentListClickHandler}>Agents</button> | <a href="#">Missions</a>
+                        </div>
+                    </nav>
+                    <main>
+
+                        <h2>Delete Agent</h2>
+
+                        <p>Proceed with deleting this agent?</p>
+
+                        <h3>{firstName} {middleName} {lastName}</h3>
+
+                        <ul>
+                            <li><span>DOB:</span>{dob}</li>
+                            <li><span>Height in Inches:</span>{setHeightInInches}</li>
+                        </ul>
+
+                        <button type="button" onClick={deleteAgentFormSubmitHandler}>Delete Agent</button>
+
+                        <a onClick={homeClickHandler}>Cancel</a>
+
+                    </main>
+                    <footer>
+                        <section>
+                            <h2>Legal Notices</h2>
+                            <p>Copyright &copy; 2021 Field Agent Inc. All rights reserved | <a href="#">Privacy Policy</a></p>
+                        </section>
+                    </footer>
+                </div>
+            ) : null}
+
             {currentView === 'Home' ? (
                 <>
                     <div class="container">
@@ -313,10 +374,10 @@ function FieldAgents() {
                             </div>
                         </header>
                         <nav>
-                        <div>
-                            <button type="button" onClick={homeClickHandler} >Home</button> | <a href="#">Agencies</a> | <a href="#">Locations</a> |
-                            <button type="button" onClick={agentListClickHandler}>Agents</button> | <a href="#">Missions</a>
-                        </div>
+                            <div>
+                                <button type="button" onClick={homeClickHandler} >Home</button> | <a href="#">Agencies</a> | <a href="#">Locations</a> |
+                                <button type="button" onClick={agentListClickHandler}>Agents</button> | <a href="#">Missions</a>
+                            </div>
                         </nav>
                         <main>
                             <h2>Agents</h2>
