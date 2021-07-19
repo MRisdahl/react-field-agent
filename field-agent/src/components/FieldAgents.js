@@ -163,34 +163,34 @@ function FieldAgents() {
 
                             <div className="field">
                                 <label for="firstName">First Name:</label>
-                                <input id="firstName" name="firstName" type="text" value={firstName} onChange={firstNameOnChangeHandler}></input>
+                                <input id="firstName" name="firstName" type="text" onChange={firstNameOnChangeHandler}></input>
                             </div>
 
                             <div className="field">
                                 <label for="middleName">Middle Name:</label>
-                                <input id="middleName" name="middleName" type="text" value={middleName} onChange={middleNameOnChangeHandler}></input>
+                                <input id="middleName" name="middleName" type="text" onChange={middleNameOnChangeHandler}></input>
                             </div>
 
                             <div className="field">
                                 <label for="lastName">Last Name:</label>
-                                <input id="lastName" name="lastName" type="text" value={lastName} onChange={lastNameOnChangeHandler}></input>
+                                <input id="lastName" name="lastName" type="text" onChange={lastNameOnChangeHandler}></input>
                             </div>
 
                             <div className="field">
                                 <label for="dob">DOB:</label>
-                                <input id="dob" name="dob" type="date" value={dob} onChange={dobOnChangeHandler}></input>
+                                <input id="dob" name="dob" type="date" onChange={dobOnChangeHandler}></input>
                             </div>
 
                             <div className="field">
                                 <label for="heightInInches">Height in Inches:</label>
-                                <input id="heightInInches" name="heightInInches" type="number" min="0" max="200" value={heightInInches} onChange={heightInInchesOnChangeHandler}></input>
+                                <input id="heightInInches" name="heightInInches" type="number" min="0" max="200" onChange={heightInInchesOnChangeHandler}></input>
                             </div>
 
                             <button><i className="fas fa-plus-circle"></i> Add Agent</button>
 
                         </form>
 
-                        <a href="agents.html">Cancel</a>
+                        <button type="button" onClick={homeClickHandler} >Cancel</button>
 
                     </main>
                     <footer>
@@ -252,7 +252,7 @@ function FieldAgents() {
 
                         </form>
 
-                        <a href="agents.html">Cancel</a>
+                        <button type="button" onClick={homeClickHandler} >Cancel</button>
 
                     </main>
                     <footer>
@@ -294,7 +294,7 @@ function FieldAgents() {
 
                         <button type="button" onClick={deleteAgentFormSubmitHandler}>Delete Agent</button>
 
-                        <a onClick={homeClickHandler}>Cancel</a>
+                        <button type="button" onClick={homeClickHandler} >Cancel</button>
 
                     </main>
                     <footer>
