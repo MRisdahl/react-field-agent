@@ -190,7 +190,7 @@ function FieldAgents() {
 
                         </form>
 
-                        <button type="button" onClick={homeClickHandler} >Cancel</button>
+                        <button type="button" onClick={agentListClickHandler} >Cancel</button>
 
                     </main>
                     <footer>
@@ -252,7 +252,7 @@ function FieldAgents() {
 
                         </form>
 
-                        <button type="button" onClick={homeClickHandler} >Cancel</button>
+                        <button type="button" onClick={agentListClickHandler} >Cancel</button>
 
                     </main>
                     <footer>
@@ -294,7 +294,7 @@ function FieldAgents() {
 
                         <button type="button" onClick={deleteAgentFormSubmitHandler}>Delete Agent</button>
 
-                        <button type="button" onClick={homeClickHandler} >Cancel</button>
+                        <button type="button" onClick={agentListClickHandler} >Cancel</button>
 
                     </main>
                     <footer>
